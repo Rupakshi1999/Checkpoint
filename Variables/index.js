@@ -17,7 +17,7 @@ ASSIGN the variable named myFirstVariable with a string value
 
 var exampleVariable;
 
-exampleVariable = 'I am a string';
+exampleVariable = "I am a string";
 
 /*
 QUESTION 1
@@ -26,7 +26,7 @@ ASSIGN the variable named myFirstVariable with the data type null
 
 */
 
-var myFirstVariable;
+var myFirstVariable = null;
 
 /*
 QUESTION 2
@@ -36,7 +36,7 @@ Assign it to a BOOLEAN data type
 
 */
 
-var mySecondVariable;
+var mySecondVariable = true;
 
 // YOUR CODE HERE
 
@@ -47,7 +47,7 @@ ASSIGN mythirdVar to equal to a string with the text ==>  hello world
 
 */
 
-var myThirdVar;
+var myThirdVar = "hello world";
 
 // YOUR CODE HERE
 
@@ -58,7 +58,7 @@ ASSIGN myFourthVar to equal to a string with the text ==> This Is Case Sensitive
 
 */
 
-var myFourthVar;
+var myFourthVar = "This Is Case Sensitive";
 
 // YOUR CODE HERE
 
@@ -70,7 +70,7 @@ ASSIGN myAge to your age, use the number data type
 
 */
 
-var myAge;
+var myAge = 21;
 
 // YOUR CODE HERE
 
@@ -85,7 +85,7 @@ i.e. + - / *
 */
 
 var myAgeCalc = null;
-
+myAgeCalc = 21 - 3 * 7 + (10 * 2 + 1);
 // YOUR CODE HERE
 
 /*
@@ -100,7 +100,7 @@ refer to lecutre about expressions
 
 (1 + 5) * 4;
 
-var numExpression;
+var numExpression = 5;
 
 // YOUR CODE HERE
 
@@ -112,11 +112,11 @@ TEST SECTION, PLEASE DO NOT TOUCH
 
 */
 
-const Mocha = require('mocha');
+const Mocha = require("mocha");
 
 const runner = new Mocha({});
 
-runner.addFile('./test.js');
+runner.addFile("./test.js");
 
 runner.run((failures) => {
   // if (failures) {
@@ -137,4 +137,4 @@ module.exports = {
   numExpression,
 };
 
-console.log('');
+console.log("");
