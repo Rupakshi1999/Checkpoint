@@ -15,7 +15,7 @@ CREATE A FUNCTION THAT CONSOLE.LOGS hello world 3 times
 
 function helloWorld3Times() {
   for (var i = 0; i < 3; i++) {
-    console.log('hello world');
+    console.log("hello world");
   }
 }
 
@@ -28,6 +28,7 @@ CREATE A FUNCTION THAT ACCEPTS ONE ARGUMENT, THE NUMBER OF TIMES IT WILL CONSOLE
 */
 
 function dynamicHelloWorld(num) {
+  for (let i = 0; i < num; i++) console.log("hello world");
   // CODE HERE
 }
 
@@ -39,6 +40,7 @@ CREATE A FUNCTION THAT ACCEPTS A STRING AND WILL LOG TO THE CONSOLE EACH CHARACT
 */
 
 function logEachChar(str) {
+  for (let i = 0; i < str.length; i++) console.log(str[i]);
   // CODE HERE
 }
 
@@ -54,6 +56,10 @@ e.g. checkIfCharExists('hello', 'l') ===> true
 */
 
 function checkIfCharExists(str, char) {
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === char) return true;
+  }
+  return false;
   // CODE HERE
 }
 
@@ -68,6 +74,14 @@ e.g. indexOf('hello', 'l') ===> 2
 */
 
 function indexOf(str, char) {
+  var location = -1;
+  var i = 0;
+  while (str[i] !== char) {
+    i++;
+    if (i === str.length) return location;
+  }
+  return i;
+
   // CODE HERE
 }
 
@@ -100,6 +114,14 @@ FizzBuzz
 */
 
 function fizzBuzz(num) {
+  var i = 1;
+  while (i <= num) {
+    if (i % 3 == 0) console.log("Fizz");
+    else if (i % 5 == 0) console.log("Buzz");
+    else if (i % 15 == 0) console.log("FizzBuzz");
+    else console.log(i);
+    i++;
+  }
   // CODE HERE
 }
 
@@ -114,7 +136,11 @@ THE FIBONACCI SEQUENCE STARTS WITH 1 AND 1 AND THEN THE NEXT NUMBER IS THE ADDIT
 */
 
 function fibonacci(n) {
-  // CODE HERE
+  var result = [1, 1];
+  for (i = 2; i <= n; i++) {
+    result[i] = result[i - 1] + result[i - 2];
+  }
+  return result[n - 1];
 }
 
 console.log(fibonacci(5));
@@ -127,11 +153,11 @@ TEST SECTION, PLEASE DO NOT TOUCH
 
 */
 
-const Mocha = require('mocha');
+const Mocha = require("mocha");
 
 const runner = new Mocha({});
 
-runner.addFile('./test.js');
+runner.addFile("./test.js");
 
 runner.run();
 
@@ -145,4 +171,4 @@ module.exports = {
   fibonacci,
 };
 
-console.log('');
+console.log("");
